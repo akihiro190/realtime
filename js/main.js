@@ -27,7 +27,6 @@ var app = new Vue({
         var params = { page: 1, per_page: 20, query: this.keyword }
         axios.get('https://qiita.com/api/v2/items', {params})
         .then(function(response){
-          console.log(response)
           vm.items = response.data
         })
         .catch(function(error){
